@@ -1,4 +1,4 @@
-package com.ferdian.newsappmvvm
+package com.ferdian.newsappmvvm.models
 
 data class Source(
     val id: Any,

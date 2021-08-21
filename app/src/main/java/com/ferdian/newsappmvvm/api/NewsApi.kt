@@ -1,6 +1,6 @@
 package com.ferdian.newsappmvvm.api
 
-import com.ferdian.newsappmvvm.NewsResponse
+import com.ferdian.newsappmvvm.models.NewsResponse
 import com.ferdian.newsappmvvm.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
