@@ -10,6 +10,7 @@ import com.ferdian.newsappmvvm.databinding.FragmentArticleBinding
 import com.ferdian.newsappmvvm.databinding.FragmentSearchNewsBinding
 import com.ferdian.newsappmvvm.ui.NewsActivity
 import com.ferdian.newsappmvvm.ui.NewsViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class ArticleFragment : Fragment(R.layout.fragment_article) {
     lateinit var viewModel: NewsViewModel
@@ -31,6 +32,9 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
             loadUrl(article.url)
         }
 
-
+        binding.fab.setOnClickListener {
+            viewModel.saveArticle(article)
+            Snackbar.make(view, "Article Saved Succesfully", Snackbar.LENGTH_SHORT).show()
+        }
     }
 }
